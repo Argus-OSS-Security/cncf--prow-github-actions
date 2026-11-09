@@ -8,10 +8,11 @@
 # so this job waits for that run to finish and then undoes it: removes `needs-kind` and
 # deletes the bot's marker comment, as the bot would on a `labeled` event it never sees.
 name: Agent-filed issues
-on:
-  issues:
-    types: [opened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [opened]
+# 
 permissions:
   issues: write
   actions: read

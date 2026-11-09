@@ -1,13 +1,14 @@
 name: Pre-Release (manual)
 
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: Pre-release version without leading v (e.g. 2.1.0-rc.1)
-        required: true
-        type: string
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       version:
+#         description: Pre-release version without leading v (e.g. 2.1.0-rc.1)
+#         required: true
+#         type: string
+# 
 permissions:
   contents: read
 

@@ -1,16 +1,17 @@
 name: Build and test code
-on:
-  push:
-    branches: [main]
-  pull_request:
-  # lets a maintainer re-run the main baseline on demand
-  workflow_dispatch:
-  # tide merges with github.token don't trigger push runs on main;
-  # the daily schedule keeps a build-test baseline on the merged result.
-  # GitHub emails scheduled-run failures to whoever last edited the cron line.
-  schedule:
-    - cron: '17 6 * * *'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#   # lets a maintainer re-run the main baseline on demand
+#   workflow_dispatch:
+#   # tide merges with github.token don't trigger push runs on main;
+#   # the daily schedule keeps a build-test baseline on the merged result.
+#   # GitHub emails scheduled-run failures to whoever last edited the cron line.
+#   schedule:
+#     - cron: '17 6 * * *'
+# 
 permissions:
   contents: read
 

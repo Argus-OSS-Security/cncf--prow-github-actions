@@ -2,25 +2,26 @@
 # is the same file for consumers, with pull_request_target and @v3.5.0. Kept on pull_request here, so
 # fork pull requests are handled by the scheduled sweep like templates/workflow-templates/prow-pull-request.yml.
 name: Prow bot
-on:
-  issues:
-    types: [opened, reopened, labeled, unlabeled]
-  issue_comment:
-    types: [created]
-  pull_request:
-    types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
-  pull_request_review:
-    types: [submitted, dismissed]
-  check_suite:
-    types: [completed]
-  schedule:
-    - cron: '*/20 * * * *'
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/prow.yaml]
-
-# the reusable workflow can use at most what is granted here
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issues:
+#     types: [opened, reopened, labeled, unlabeled]
+#   issue_comment:
+#     types: [created]
+#   pull_request:
+#     types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
+#   pull_request_review:
+#     types: [submitted, dismissed]
+#   check_suite:
+#     types: [completed]
+#   schedule:
+#     - cron: '*/20 * * * *'
+#   workflow_dispatch:
+#   push:
+#     branches: [main]
+#     paths: [.github/prow.yaml]
+# 
+# # the reusable workflow can use at most what is granted here
 permissions:
   contents: write
   issues: write
